@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  padding: 60px 15px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.items {
+  display: flex;
+}
+
+.item {
+  /* width: 45%;
+  height: 200px; */
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid #009BC2;
+
+  color: #fff;
+  font-size: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 缩放 */
+.div_wrapper_line{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0px;
+    right: 5px;
+}
+
+.div_wrapper_line:hover{
+    cursor: e-resize;
+}
+
+.div_wrapper_line::after{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -15px;
+    right: -15px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
