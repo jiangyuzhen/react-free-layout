@@ -6,4 +6,30 @@ live demo:
 https://jiangyuzhen.github.io/react-free-layout/
 
 
-备注: 未全部完成
+#### 解析知识点
+> 基于 jQuery 的事件委托, 减少性能损耗
+```
+  $('#items').on('mousedown', '.div_wrapper_line', (e) => {
+    // ...
+  })
+```
+> [sortablejs](https://github.com/rubaxa/Sortable): Sortable is a minimalist JavaScript library for reorderable drag-and-drop lists.
+
+> 利用 after 伪元素扩张操作区域
+```
+  .div_wrapper_line:hover{
+      cursor: e-resize;
+  }
+
+  .div_wrapper_line::after{
+      content: '';
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: -15px;
+      right: -15px;
+  }
+
+```
